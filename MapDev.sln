@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapDev", "MapDev\MapDev.csproj", "{864F51A2-601F-4A8B-B009-FD5C3414706B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibraryP", "..\CommonLibraryP\CommonLibraryP\CommonLibraryP.csproj", "{23A7D710-E91C-7E2E-49C9-F4A0BB0B0D6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{864F51A2-601F-4A8B-B009-FD5C3414706B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{864F51A2-601F-4A8B-B009-FD5C3414706B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{864F51A2-601F-4A8B-B009-FD5C3414706B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A7D710-E91C-7E2E-49C9-F4A0BB0B0D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A7D710-E91C-7E2E-49C9-F4A0BB0B0D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A7D710-E91C-7E2E-49C9-F4A0BB0B0D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A7D710-E91C-7E2E-49C9-F4A0BB0B0D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
