@@ -1,0 +1,11 @@
+﻿@page "/MapEditor/{Id}"
+@rendermode InteractiveServer
+@inject MapService machineService
+
+<MapEditor MapConfigId="@Id" ></MapEditor>
+
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = null!;
+}
