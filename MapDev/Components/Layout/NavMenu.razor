@@ -1,9 +1,30 @@
-﻿﻿﻿<div>
+﻿@inject MapService mapService
+
+<div>
     <DxMenu Orientation="@Orientation.Vertical" CssClass="menu">
         <Items>
             <DxMenuItem NavigateUrl="/" Text="Home" CssClass="menu-item" IconCssClass="icon home-icon"></DxMenuItem>
-            <DxMenuItem NavigateUrl="/counter" Text="Counter" CssClass="menu-item" IconCssClass="icon counter-icon"></DxMenuItem>
-            <DxMenuItem NavigateUrl="/weather" Text="Weather" CssClass="menu-item" IconCssClass="icon weather-icon"></DxMenuItem>                                    
+            <DxMenuItem Text="Maps">
+                <Items>
+                    @foreach (var mapConfig in mapConfigs)
+                    {
+                        <DxMenuItem Text=@(mapConfig.Name)>
+                            <Items>
+                                <DxMenuItem NavigateUrl=@($"/MapEditor/{mapConfig.Id}") Text="Map Editor" />
+                                <DxMenuItem NavigateUrl=@($"/MapDashboard/{mapConfig.Id}") Text="Map Dashboard"/>
+                            </Items>
+                        </DxMenuItem>
+                    }
+                </Items>
+            </DxMenuItem>
         </Items>
     </DxMenu>
 </div>
+
+@code {
+    private List<MapConfig> mapConfigs = new List<MapConfig>();
+    protected override async Task OnInitializedAsync()
+    {
+        mapConfigs = await mapService.GetAllMapsConfig();
+    }
+}
